@@ -1,5 +1,7 @@
 # Shirley's Blog an Astro blog with automatic backlinks
 
+https://hohilwik.github.io/blog/
+
 A small static blog, built with [Astro](https://astro.build), where posts that link to each
 other automatically show up as "Referenced by" on both ends no wiki syntax, no database, no
 plugin to configure. It's meant to be hosted on **GitHub Pages for free**, deployed by GitHub Actions on every push.
