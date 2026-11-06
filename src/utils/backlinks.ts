@@ -21,8 +21,11 @@ export type BacklinkEntry = {
 let cache: Map<string, BacklinkEntry[]> | null = null;
 
 function stripBase(path: string, base: string): string {
-  if (base && base !== '/' && path.startsWith(base)) {
-    return path.slice(base.length);
+  // Only strip when the base is followed by the /blog/ route, so a base that is
+  // itself "/blog" (repo named "blog") isn't mistaken for the route.
+  const b = base.replace(/\/$/, '');
+  if (b && path.startsWith(`${b}/blog/`)) {
+    return path.slice(b.length);
   }
   return path;
 }

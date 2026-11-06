@@ -32,7 +32,8 @@ export function rehypeBaseUrl(base) {
       }
       const href = node.properties.href;
       const isRootRelative = href.startsWith('/') && !href.startsWith('//');
-      const alreadyPrefixed = href === normalizedBase || href.startsWith(`${normalizedBase}/`);
+      // `${base}/blog/` rather than `${base}/`: with base "/blog" every post link starts with "/blog/"
+      const alreadyPrefixed = href.startsWith(`${normalizedBase}/blog/`);
       if (isRootRelative && !alreadyPrefixed) {
         node.properties.href = normalizedBase + href;
       }
