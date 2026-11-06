@@ -32,7 +32,7 @@ If we have a shared log of verified process in a multi-step problem with a verif
 
 Selection with an evaluator? Things start to look like the cross-entropy method.
 
-How about you copy earlier agents? You'll start getting cascades and there's a nice name for 
+How about you copy earlier agents? You'll start getting cascades and there's a nice name for it called the chinese restaurant process.
 
 ## In practice
 
