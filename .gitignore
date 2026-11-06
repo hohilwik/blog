@@ -1,0 +1,49 @@
+# Allowlist: ignore everything at the top level, then re-include only what the
+# build, the deploy workflow, and the content need. New top-level files stay
+# local unless added below.
+/*
+
+# build & deploy
+!/.github/
+!/.gitignore
+!/astro.config.mjs
+!/package.json
+!/package-lock.json
+!/tsconfig.json
+!/scripts/
+
+# site source & content
+!/src/
+!/public/
+
+# docs (GitHub repo page)
+!/README.md
+!/README_SHIR.md
+
+# junk that can appear inside the allowed folders
+# local-only dev check, not needed for deploy
+/scripts/*.test.mjs
+node_modules/
+dist/
+.astro/
+.env
+.env.*
+*.log
+*.bak
+*.tmp
+*.swp
+*~
+.DS_Store
+._*
+Thumbs.db
+desktop.ini
+.idea/
+.vscode/
+
+# posts kept local only (not published)
+/src/content/blog/a-year-of-phenology.md
+/src/content/blog/keeping-a-field-notebook.md
+/src/content/blog/lichen-as-a-clock.md
+/src/content/blog/moth-nights.md
+/src/content/blog/PAPER_FORMALIZATION_PLAN.md
+/src/content/blog/the-slow-eye.md
